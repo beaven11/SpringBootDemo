@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Author: wangpeifeng
- * Date: 2018/06/11 11:24
+ * @author wangpeifeng
+ * @date 2018/06/11 11:24
  */
 @Entity
 public class User implements Serializable {

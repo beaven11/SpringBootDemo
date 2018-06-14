@@ -13,9 +13,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Author: wangpeifeng
- * <p>
- * Date: 2018/06/11 11:16
+ * @author tingw
+ * @date 2018/06/11 11:16
  */
 @RestController
 public class HelloController {

@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Author: wangpeifeng
- * Date: 2018/06/11 12:38
+ * @author wangpeifeng
+ * @date 2018/06/11 12:38
  */
 @Service
 public class ServiceManagerImpl implements ServiceManager {
