@@ -1,6 +1,6 @@
 package com.beaven.spring.demo.service;
 
-import com.beaven.spring.demo.domain.User;
+import com.beaven.spring.demo.domain.bean.db.User;
 
 import java.util.List;
 

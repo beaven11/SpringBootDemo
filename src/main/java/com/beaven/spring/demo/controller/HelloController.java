@@ -1,13 +1,13 @@
 package com.beaven.spring.demo.controller;
 
-import com.beaven.spring.demo.domain.User;
+import com.beaven.spring.demo.config.ResponseException;
+import com.beaven.spring.demo.domain.bean.ResponseResult;
+import com.beaven.spring.demo.domain.bean.db.User;
 import com.beaven.spring.demo.service.ServiceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -28,24 +28,32 @@ public class HelloController {
         this.serviceManager = serviceManager;
     }
 
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String index() {
         logger.info("--request index method,return {}", "hello world");
         return "Hello World";
     }
 
-    @RequestMapping("/time")
+    @GetMapping("/time")
     public String time() {
         return new Date().toString();
     }
 
-    @RequestMapping("/user")
+    @GetMapping("/user")
     public List<User> provideUser() {
         return serviceManager.findUserAll();
     }
 
-    @RequestMapping(value = "/user/save", method = RequestMethod.POST)
+    @PostMapping(value = "/user/save")
     public Boolean saveUser(String name, int age) {
         return serviceManager.saveUser(name, age);
+    }
+
+    @GetMapping("/test/{id}")
+    public ResponseResult<String> error(@PathVariable("id") String id) {
+        if ("test".equals(id)) {
+            throw new ResponseException(400, "id is test");
+        }
+        return ResponseResult.success("test success");
     }
 }

@@ -1,4 +1,4 @@
-package com.beaven.spring.demo.domain;
+package com.beaven.spring.demo.domain.bean.db;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

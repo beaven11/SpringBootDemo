@@ -1,6 +1,6 @@
 package com.beaven.spring.demo;
 
-import com.beaven.spring.demo.domain.User;
+import com.beaven.spring.demo.domain.bean.db.User;
 import com.beaven.spring.demo.domain.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;

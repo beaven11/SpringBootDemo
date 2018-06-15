@@ -1,5 +1,6 @@
 package com.beaven.spring.demo.domain;
 
+import com.beaven.spring.demo.domain.bean.db.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

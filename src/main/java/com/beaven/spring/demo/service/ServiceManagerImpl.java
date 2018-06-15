@@ -1,6 +1,6 @@
 package com.beaven.spring.demo.service;
 
-import com.beaven.spring.demo.domain.User;
+import com.beaven.spring.demo.domain.bean.db.User;
 import com.beaven.spring.demo.domain.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
